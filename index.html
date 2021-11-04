@@ -1,39 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Trello clone</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="app">
-        <div class="boards">
-            <div class="boards__item">
-                <span contenteditable="true" class="title">Backlog</span>
-                <div class="list">
-                    <div class="list__item" contenteditable="true" draggable="true">Demo</div>
-                </div>
-
-                <div class="form">
-                    <textarea class="textarea" placeholder="Name your card..."></textarea>
-
-                    <div class="buttons">
-                        <button class="add__item-btn">Add card</button>
-                        <button class="cancel__item-btn">Cancel</button>
-                    </div>
-                </div>
-
-                <div class="add__btn"><span class="add__btn-plus"> + </span> Add card</div>
+      <div class="boards">
+        <div class="boards__item" id="no1">
+          <span class="title">Backlog</span>
+          <div class="list">
+            <div class="list__item" contenteditable="true" draggable="true">
+              Demo1
             </div>
+          </div>
+          <div class="form">
+            <textarea
+              class="textarea"
+              placeholder="Name your card..."
+            ></textarea>
+            <div class="buttons">
+              <button class="add__item-btn">Add card</button>
+              <button class="cancel__item-btn">Cancel</button>
+            </div>
+          </div>
+          <div class="add__btn" onclick="addTask(0)">
+            <span class="add__btn-plus"> + </span> Add card
+          </div>
         </div>
+        <div class="boards__item" id="no2">
+          <span class="title">In Progress</span>
+          <div class="list">
+            <div class="list__item" contenteditable="true" draggable="true">
+              Demo2
+            </div>
+          </div>
+          <div class="form">
+            <textarea
+              class="textarea"
+              placeholder="Name your card..."
+            ></textarea>
+            <div class="buttons">
+              <button class="add__item-btn">Add card</button>
+              <button class="cancel__item-btn">Cancel</button>
+            </div>
+          </div>
+          <div class="add__btn" onclick="addTask(1)">
+            <span class="add__btn-plus"> + </span> Add card
+          </div>
+        </div>
+        <div class="boards__item" id="no3">
+          <span class="title">Complete</span>
+          <div class="list">
+            <div class="list__item" contenteditable="true" draggable="true">
+              Demo3
+            </div>
+          </div>
+          <div class="form">
+            <textarea
+              class="textarea"
+              placeholder="Name your card..."
+            ></textarea>
+            <div class="buttons">
+              <button class="add__item-btn">Add card</button>
+              <button class="cancel__item-btn">Cancel</button>
+            </div>
+          </div>
+          <div class="add__btn" onclick="addTask(2)">
+            <span class="add__btn-plus"> + </span> Add card
+          </div>
+        </div>
+        <div class="boards__item" id="no4">
+          <span class="title">On Hold</span>
+          <div class="list">
+            <div class="list__item" contenteditable="true" draggable="true">
+              Demo4
+            </div>
+          </div>
+          <div class="form">
+            <textarea
+              class="textarea"
+              placeholder="Name your card..."
+            ></textarea>
+            <div class="buttons">
+              <button class="add__item-btn">Add card</button>
+              <button class="cancel__item-btn">Cancel</button>
+            </div>
+          </div>
+          <div class="add__btn" onclick="addTask(3)">
+            <span class="add__btn-plus"> + </span> Add card
+          </div>
+        </div>
+      </div>
 
-        <div class="button">Add List</div>
+      <div class="button">Add List</div>
     </div>
     <script type="text/javascript" src="main.js"></script>
-</body>
+  </body>
 </html>
