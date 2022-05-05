@@ -12,16 +12,29 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Trello clone</title>
+    <script
+      src="https://kit.fontawesome.com/332a215f17.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
+
   <body>
+    <header>
+      <h1 class="header-title">Trello Clone</h1>
+      <div class="button">Add List</div>
+    </header>
     <div class="app">
       <div class="boards">
-        <div class="boards__item" id="no1">
+        <div class="boards__item" id="no0">
           <span class="title">Backlog</span>
           <div class="list">
-            <div class="list__item" contenteditable="true" draggable="true">
-              Demo1
-            </div>
+            <div
+              class="list__item"
+              draggable="true"
+              id="card1"
+            >
+            Demo1
+          </div>
           </div>
           <div class="form">
             <textarea
@@ -36,11 +49,18 @@
           <div class="add__btn" onclick="addTask(0)">
             <span class="add__btn-plus"> + </span> Add card
           </div>
+          <div class="delete__board" onclick="deleteBoard(0)">
+            <span><i class="fas fa-trash"></i></span>Delete list
+          </div>
         </div>
-        <div class="boards__item" id="no2">
+        <div class="boards__item" id="no1">
           <span class="title">In Progress</span>
           <div class="list">
-            <div class="list__item" contenteditable="true" draggable="true">
+            <div
+              class="list__item"
+              draggable="true"
+              id="card2"
+            >
               Demo2
             </div>
           </div>
@@ -57,11 +77,18 @@
           <div class="add__btn" onclick="addTask(1)">
             <span class="add__btn-plus"> + </span> Add card
           </div>
+          <div class="delete__board" onclick="deleteBoard(1)">
+            <span><i class="fas fa-trash"></i></span>Delete list
+          </div>
         </div>
-        <div class="boards__item" id="no3">
+        <div class="boards__item" id="no2">
           <span class="title">Complete</span>
           <div class="list">
-            <div class="list__item" contenteditable="true" draggable="true">
+            <div
+              class="list__item"
+              draggable="true"
+              id="card3"
+            >
               Demo3
             </div>
           </div>
@@ -78,11 +105,18 @@
           <div class="add__btn" onclick="addTask(2)">
             <span class="add__btn-plus"> + </span> Add card
           </div>
+          <div class="delete__board" onclick="deleteBoard(2)">
+            <span><i class="fas fa-trash"></i></span>Delete list
+          </div>
         </div>
-        <div class="boards__item" id="no4">
+        <div class="boards__item" id="no3">
           <span class="title">On Hold</span>
           <div class="list">
-            <div class="list__item" contenteditable="true" draggable="true">
+            <div
+              class="list__item"
+              draggable="true"
+              id="card4"
+            >
               Demo4
             </div>
           </div>
@@ -99,10 +133,18 @@
           <div class="add__btn" onclick="addTask(3)">
             <span class="add__btn-plus"> + </span> Add card
           </div>
+          <div class="delete__board" onclick="deleteBoard(3)">
+            <span><i class="fas fa-trash"></i></span>Delete list
+          </div>
         </div>
       </div>
-
-      <div class="button">Add List</div>
+      <div class="modal">
+        <div class="modal__content">
+          <input class="modal__text" type="text" value="">
+          <span class="modal__close">&times;</span>
+          <button class="modal__delete">Delete</button>
+        </div>
+      </div>
     </div>
     <script type="text/javascript" src="main.js"></script>
   </body>
